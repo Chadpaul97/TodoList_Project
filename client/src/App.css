@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: rgb(39,142,177);
+  background: linear-gradient(180deg, rgba(39,142,177,1) 0%, rgba(87,144,197,1) 46%, rgba(119,124,205,1) 100%);
+}
+
+.App h1{
+  margin-bottom: 20px;
+}
+
+/************* SIGNIN.jsx **************/
+.col-sm-5 {
+  padding-top: 10px;
+  height: 10%;
+  background-color: black;
+  opacity: .75;
+  border-radius: 15px;
+}
+
+.row{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.middle-border{
+  border-right: .5px solid white;
+  height: 400px;
+}
+
+
+
+/************* FORM TOP **************/
+.form-top{
+  background-color: black;
+  color: white;
+}
+.form-top-left h3{
+  font-size: 22px;
+  font-weight: 300;
+}
+.form-top-left p{
+  font-size: 16px;
+  font-weight: 300;
+}
+.form-top-left{
+  text-align: left;
+}
+
+
+/************* FORM BOTTOM **************/
+.form-bottom input{
+  height: 35px;
+}
+.form-bottom p{
+  font-size: small;
+}
+
+
+/************* Todo **************/
+.navbar button{
+padding: 0px;
+}
+.todoForm{
+  margin-top: 20px;
+  border-radius: 20px;
+  color: white;
+  background-color:  #2D2E2E;
+}
+.todoForm button{
+  border-radius: 7px;
+  background-color: #20FC8F;
+}
+.todos{
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.title{
+  color: white;
+  background-color: #69231b;
+}
+
+
+.emailEdit{
+  margin-right: 35px;
+}
+
+.taskDone {
+  color: black;
+  text-decoration: line-through;
+}
