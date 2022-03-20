@@ -81,17 +81,17 @@ export default function Dashboard() {
         const updatedTodo = loggedInUser.todos?.map((todo, i) => {
             console.log("IIIIII", i)
             if (idx === i) {
-                // if (todo.complete = false) {
-                todo.complete = true
-                console.log("Made True")
-                // }
+                if (todo.complete === false) {
+                    todo.complete = true
+                    console.log("Made True")
 
-                // if (todo.complete = true) {
-                //     todo.complete = false
-                //     console.log("Made False")
-                // }
-            }
-            return todo
+                }
+                else {
+                    todo.complete = false
+                    console.log("Made False")
+                    //     return todo
+                }
+            } return todo
         })
         setLoggedInUser(updatedTodo)
         console.log("MAde it past the stuff")
@@ -106,17 +106,17 @@ export default function Dashboard() {
             })
     }
 
-    const sortArray = type => {
-        const types = {
-            All: 'All',
-            Not_Complete: 'Not Complete',
-            Complete: 'Complete',
-        };
-        const sortProperty = types[type];
-        const sorted = todo.sort((a, b) => b[sortProperty] - a[sortProperty]);
-        console.log(sorted);
-        setLoggedInUser(sorted);
-    };
+    // const sortArray = type => {
+    //     const types = {
+    //         All: 'All',
+    //         Not_Complete: 'Not Complete',
+    //         Complete: 'Complete',
+    //     };
+    //     const sortProperty = types[type];
+    //     const sorted = loggedInUser.todos.sort((a, b) => b[sortProperty] - a[sortProperty]);
+    //     console.log(sorted);
+    //     setLoggedInUser(sorted);
+    // };
 
     return (
         <div>
@@ -135,13 +135,13 @@ export default function Dashboard() {
                 <p className="text-danger">{formErrors.note?.message}</p>
                 <button type='addTodo submit'>Add</button>
             </form>
-            <div className='mb-3'>
+            {/* <div className='mb-3'>
                 <select onChange={(e) => sortArray(e.target.value)}>
                     <option value="complete">All</option>
                     <option value="members">Not Complete</option>
                     <option value="formed">Complete</option>
                 </select>
-            </div>
+            </div> */}
             <div className='d-flex flex-row flex-wrap justify-content-evenly container'>
                 {
                     loggedInUser.todos?.map((todo, i) => {
